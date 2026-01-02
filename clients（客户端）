@@ -34,7 +34,7 @@
         "server_name": "www.bing.com",
         "reality": {
           "enabled": true,
-          "public_key": "reality公钥，使用sing-box generate reality key-pair生成密钥对",
+          "public_key": "reality公钥，使用sing-box generate reality-keypair生成密钥对",
           "short_id": "服务器short id，需匹配服务端的short id",
         },
         "utls": {
