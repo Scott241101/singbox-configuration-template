@@ -20,9 +20,9 @@
           "uuid": "用户uuid"
         },
 
-	{
-	  "uuid": "用户uuid"
-	}
+		{
+	  	"uuid": "用户uuid"
+		}
 	//使用sing-box generate uuid生成uuid
         
 
