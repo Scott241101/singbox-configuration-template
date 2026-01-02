@@ -11,6 +11,7 @@
 使用sudo sing-box run -c "/路径/你的服务端配置"即可以指定配置运行singbox并开启vpn服务器
 
 
+
 电脑端使用v2rayN即可
   
     在v2rayN底部栏需要打开tun开关和全局路由
