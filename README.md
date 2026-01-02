@@ -15,7 +15,7 @@
   
     在v2rayN底部栏需要打开tun开关和全局路由
 
-安卓和ios使用sing-box
+安卓和ios在应用商店（安卓为play商店,ios为app store）里面搜索sing-box并下载
 
   点击底部栏第三个图标，然后点击右下角+号选择手动创建配置
   
