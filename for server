@@ -1,0 +1,64 @@
+{
+  "log": {
+    "level": "info",
+    "output": "日志输出路径/和文件名",
+    "timestamp": true
+  },
+
+  "inbounds": [
+    {
+      "type": "vless",
+      "tag": "reality-in",
+      "listen": "::",
+      "listen_port": 443,
+      "users": [
+        {
+          "uuid": "用户uuid"   
+        },
+
+        {
+          "uuid": "用户uuid"
+        },
+
+	{
+	  "uuid": "用户uuid"
+	}
+	//使用sing-box generate uuid生成uuid
+        
+
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "reality": {
+          "enabled": true,
+          "private_key": "reality私钥，使用sing-box generate reality key-pair生成密钥对",
+          "short_id": [
+            "服务端short id，格式为8位16进制数字和字母"
+          ],
+	  "handshake": {
+            "server": "www.bing.com",
+            "server_port": 443
+          }
+        }
+      }
+    }
+  ],
+
+  "outbounds": [ 
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+
+  "route": {
+    "rules": [
+      {
+        "inbound": "reality-in",
+        "outbound": "direct"
+      }
+
+    ]
+  }
+}
