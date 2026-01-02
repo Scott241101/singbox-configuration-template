@@ -10,8 +10,8 @@
 
 
 电脑端使用v2rayN即可
-
-  在v2rayN底部栏需要打开tun开关和全局路由
+  
+    在v2rayN底部栏需要打开tun开关和全局路由
 
 安卓和ios使用sing-box
 
