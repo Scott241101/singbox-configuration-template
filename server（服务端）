@@ -12,20 +12,10 @@
       "listen": "::",
       "listen_port": 443,
       "users": [
-        {
-          "uuid": "用户uuid"   
-        },
-
-        {
-          "uuid": "用户uuid"
-        },
-
-		{
-	  	"uuid": "用户uuid"
-		}
-	//使用sing-box generate uuid生成uuid
-        
-
+        {"uuid": "用户uuid"},
+        {"uuid": "用户uuid"},
+		{"uuid": "用户uuid"}
+	//使用sing-box generate uuid生成uuid  
       ],
       "tls": {
         "enabled": true,
@@ -36,7 +26,7 @@
           "short_id": [
             "服务端short id，格式为8位16进制数字和字母"
           ],
-	  "handshake": {
+	  	"handshake": {
             "server": "www.bing.com",
             "server_port": 443
           }
