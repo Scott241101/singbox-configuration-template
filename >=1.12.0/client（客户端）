@@ -30,7 +30,7 @@
       "tag": "vless-out",
       "server": "服务器地址",
       "server_port": 443,
-      "uuid": "uuid",
+      "uuid": "用户uuid",
       "flow": "",
       "tls": {
         "enabled": true,
