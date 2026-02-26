@@ -31,6 +31,7 @@
           ],
 	  	"handshake": {
             "server": "www.bing.com",
+			//与上面server_name需要保持一致
             "server_port": 443
           }
         }
