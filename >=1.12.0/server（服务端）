@@ -41,6 +41,7 @@
             "server": "www.bing.com", 
 			//你想要伪装的域名，在azure上建议使用microsoft.com及其子域名、www.bing.com、www.msn.com，在AWS上建议使用amazon.com及其子域名，在GCP上建议使用www.fandom.com
 			//伪装的域名必须真实且可在大陆境内免翻墙访问
+			//最好与云平台主域名及其相关域名切合（如：在azure上使用microsoft.com或者www.bing.com），如果主域名不可免翻墙访问，则切换其他通用非厂商关联型域名（如：www.fandom.com）
             "server_port": 443
           }
         }
