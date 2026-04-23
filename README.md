@@ -28,6 +28,8 @@ https://github.com/SagerNet/sing-box/releases
   
   在v2rayN底部栏打开tun开关和全局路由
 
+  请务必检查顶部栏设置里面的tun设置里的MTU，确保其不大于1500，否则可能导致连接失败
+
   建议在顶部栏设置里面的core类型设置将vless改为sing-box
 
   （可选）顶部栏设置里面的tun设置里面开启ipv6
