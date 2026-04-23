@@ -1,0 +1,1 @@
+vless://<uuid>@<服务器ip>:443?security=reality&encryption=none&pbk=<公钥>&headerType=none&fp=chrome&type=tcp&sni=<服务器名称或SNI>&sid=<short id>#<配置名称>
