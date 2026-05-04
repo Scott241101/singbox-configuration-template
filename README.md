@@ -19,9 +19,7 @@
 在这个链接里面寻找对应版本，然后复制下载链接并使用wget命令下载：
 https://github.com/SagerNet/sing-box/releases
 
-之后按照模板创建服务端配置和客户端链接或者配置
-
-建议针对客户端使用链接
+之后按照模板创建服务端配置和客户端链接
 
 使用sudo sing-box run -c "/路径/你的服务端配置"即可以指定配置运行singbox并开启vpn服务器
 
