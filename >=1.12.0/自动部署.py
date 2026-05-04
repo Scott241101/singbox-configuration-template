@@ -7,12 +7,12 @@ from paramiko import SSHClient, AutoAddPolicy, Ed25519Key, SSHException
 from time import sleep
 from hashlib import sha256
 
-SERVERS_CSV = "./singbox-服务器信息.csv"
-USERS_CSV = "./singbox-客户uuid.csv"
+SERVERS_CSV = "./singbox服务器信息.csv"
+USERS_CSV = "./singbox客户uuid.csv"
 SERVER_TEMPLATE_FILE = "./template/1.12.0模板.txt"
 
-SERVERS_DIR = "./服务器配置/文件夹"
-CLIENTS_OUT_DIR = "./客户端链接/文件夹"
+SERVERS_DIR = "./服务器配置/输出文件夹"
+CLIENTS_OUT_DIR = "./客户端链接/输出文件夹"
 
 def load_csv(file_path):
     """读取 CSV 文件并过滤空行，支持中英文表头"""
