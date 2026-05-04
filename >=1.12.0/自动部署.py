@@ -45,6 +45,7 @@ class auto_deployer():
             
     def _get_client(self, key_path, key_pswd):
         # 强制只使用密钥登录，去除了密码回退逻辑
+        # 出于安全考虑，强烈不建议使用密码登录，密钥尽量使用ED25519密钥
         ssh_key = Ed25519Key.from_private_key_file(filename=key_path, password=key_pswd)
         client = SSHClient()
         client.set_missing_host_key_policy(AutoAddPolicy)
@@ -90,7 +91,8 @@ def process_server_configs(servers, users, template_path):
     new_user_list = [{"name": u["user name"], "uuid": u["uuid"]} for u in users]
     # 用于检测的 UUID 集合
     new_uuids_set = set(u["uuid"] for u in new_user_list)
-    
+
+    #出于安全考虑，强烈建议使用密码保护SSH密钥
     key_pswd_correctness = False
     key_pswd = input("请输入ssh密钥密码:")
     #出于安全原因，强烈不建议通过明文对比密码正确性
