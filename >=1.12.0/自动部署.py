@@ -93,8 +93,9 @@ def process_server_configs(servers, users, template_path):
     
     key_pswd_correctness = False
     key_pswd = input("请输入ssh密钥密码:")
+    #出于安全原因，强烈不建议通过明文对比密码正确性
     key_hash = sha256(key_pswd.encode('utf-8')).hexdigest()
-    correct_hash = "密码哈希值"
+    correct_hash = "正确密码的哈希值"
     if key_hash == correct_hash:
         key_pswd_correctness = True
     else:
@@ -159,7 +160,7 @@ def process_server_configs(servers, users, template_path):
             print(f"  ✅ {server_name}配置已同步更新。")
             # ================= 增加的 SSH 自动部署逻辑 =================
             server_ipv6 = server.get('ipv6') # 读取你表格中新增的 IPv6 列
-            
+            #出于安全考虑，仅允许通过ipv6登录
             if server_ipv6 and key_pswd_correctness:
                 try:
                     print(f"  🚀 正在通过 IPv6 [{server_ipv6}] 自动部署...")
