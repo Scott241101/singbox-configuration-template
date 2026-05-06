@@ -66,10 +66,6 @@
        "action": "reject"
       },
       {
-       "protocol": "dns",
-       "action": "hijack-dns"
-      },
-      {
         "inbound": "reality-in",
         "action": "route",
         "outbound": "direct"
