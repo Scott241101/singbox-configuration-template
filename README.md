@@ -42,6 +42,8 @@ https://github.com/2dust/v2rayNG/releases
   
   点击右下角播放按钮即可连接
 
+  点击右上角三个点里面可以测试延时
+
   （可选）建议在左上角菜单栏里面找到设置，下滑找到ipv6优先，并勾选
 
 ios去app store搜索v2box下载：
