@@ -34,8 +34,8 @@ def load_csv(file_path):
 
 #自动SSH登录模块
 class auto_deployer():
-    def __init__(self, host_ipv6, username, key_path, key_pswd):
-        self.host = host_ipv6
+    def __init__(self, host_ip, username, key_path, key_pswd):
+        self.host = host_ip
         self.username = username
         self.client = self._get_client(key_path, key_pswd)
         self.shell = self.client.invoke_shell()
@@ -96,6 +96,7 @@ def process_server_configs(servers, users, template_path):
     key_pswd_correctness = False
     key_pswd = input("请输入ssh密钥密码:")
     #出于安全原因，强烈不建议通过明文对比密码正确性
+    #使用错误密码继续但是跳过自动远程部署
     key_hash = sha256(key_pswd.encode('utf-8')).hexdigest()
     correct_hash = "正确密码的哈希值"
     if key_hash == correct_hash:
@@ -161,15 +162,14 @@ def process_server_configs(servers, users, template_path):
                 json.dump(config, f, indent=2, ensure_ascii=False)
             print(f"  ✅ {server_name}配置已同步更新。")
             # ================= 增加的 SSH 自动部署逻辑 =================
-            server_ipv6 = server.get('ipv6') # 读取你表格中新增的 IPv6 列
-            #出于安全考虑，仅允许通过ipv6登录
-            if server_ipv6 and key_pswd_correctness:
+            server_mgmt = server.get('mgmt addr') # 读取表格中的管理地址
+            if server_mgmt and key_pswd_correctness:
                 try:
-                    print(f"  🚀 正在通过 IPv6 [{server_ipv6}] 自动部署...")
+                    print(f"  🚀 正在通过 [{server_mgmt}] 自动部署...")
                     
                     # 请根据你的实际情况修改 username 和 key_path
                     deployer = auto_deployer(
-                        host_ipv6=server_ipv6, 
+                        host_ip=server_mgmt, 
                         username="用户名", 
                         key_path="SSH密钥/路径", 
                         key_pswd=key_pswd # 如果你的私钥有密码，请在这里填入
@@ -181,8 +181,8 @@ def process_server_configs(servers, users, template_path):
                 except Exception as e:
                     print(f"   ❌{server_name}远程部署失败: {e}")
             else:
-                if not server_ipv6:
-                    print(f"   ⚠️ 表格中未提供{server_name}的IPv6 地址，已跳过远程部署。")
+                if not server_mgmt:
+                    print(f"   ⚠️ 表格中未提供{server_name}的管理地址，已跳过远程部署。")
             # ==========================================================
         else:
             print(f"  ⚡{server_name}配置内容与表格一致，无需改动。")
