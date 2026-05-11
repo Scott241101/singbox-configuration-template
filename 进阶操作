@@ -1,0 +1,13 @@
+将sing-box变成安全服务运行：
+
+使用sudo nano /etc/systemd/system/sing-box.service创建服务配置文件
+
+之后填入“服务配置文件”里面的内容
+
+保存之后运行以下命令：
+
+>sudo systemctl daemon-reload
+
+>sudo systemctl enable sing-box
+
+>sudo systemctl start sing-box.service
