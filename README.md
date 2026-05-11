@@ -16,6 +16,9 @@
 
 创建完虚拟机之后在右上角导航菜单->VPC网络->VPC网络->点击你的VPC网络名称->顶部栏“防火墙”里面创建防火墙规则，需要允许所有出站流量和上述入站流量
 
+具体创建方法见此链接：
+https://drive.google.com/drive/folders/1R1ADiUCHaPJfhDfSqWEZEO7Rib2vKKfZ?usp=drive_link
+
 在这个链接里面寻找对应版本，然后复制下载链接并使用wget命令下载：
 https://github.com/SagerNet/sing-box/releases
 
