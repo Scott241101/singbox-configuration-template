@@ -38,7 +38,6 @@ https://github.com/SagerNet/sing-box/releases
 >（可选）顶部栏设置里面的tun设置里面开启ipv6
 
 安卓去此链接下载最新版v2rayNG:
-
 https://github.com/2dust/v2rayNG/releases
 
 >点击右上角+扫描二维码或者从剪切板导入即可导入配置
