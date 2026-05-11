@@ -1,0 +1,10 @@
+server conf：服务器配置名称，或者服务器名称
+ip：服务器ipv4地址
+reality priv key：reality私钥
+SNI:服务器需要伪装的网站或SNI
+short id：服务器short id
+reality pub key：reality公钥
+ipv6：服务器ipv6地址
+mgmt addr:服务器管理地址
+user name:用户名
+uuid：用户uuid
