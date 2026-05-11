@@ -1,0 +1,22 @@
+[Unit]
+Description=sing-box Service
+Documentation=https://sing-box.sagernet.org/
+After=network.target network-online.target nss-lookup.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sing-box run -c /etc/sing-box/server-conf.json
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=infinity
+# --- 安全降权配置 ---
+# 1. 强制以最低权限的 nobody 用户运行，剥夺其系统控制权
+User=nobody
+# 2. 赋予该进程绑定特权端口 (<1024) 的特定能力 (Capability)
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+# 3. 限制程序无法再次提升权限
+NoNewPrivileges=true
+# --- 新增这一行 ---
+# Systemd 会自动创建 /var/log/sing-box 目录，并把 owner 设为 nobody
+LogsDirectory=sing-box
