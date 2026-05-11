@@ -1,7 +1,7 @@
 {
   "log": {
     "level": "info",
-    "output": "日志记录路径/文件名",
+    "output": "日志记录路径/文件名,建议使用/var/log/sing-box/sing-box.log",
     "timestamp": true
   },
 
