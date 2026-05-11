@@ -1,4 +1,4 @@
-将sing-box变成安全服务运行：
+将sing-box变成安全服务开机自动运行：
 
 使用sudo nano /etc/systemd/system/sing-box.service创建服务配置文件
 
