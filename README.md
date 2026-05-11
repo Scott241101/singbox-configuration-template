@@ -48,7 +48,7 @@ https://github.com/2dust/v2rayNG/releases
 
 >（可选）建议在左上角菜单栏里面找到设置，下滑找到ipv6优先，并勾选
 
-ios去app store搜索v2box下载：
+ios去app store搜索v2box下载
 
 >去到底部栏第二个选项里面，通过右上角+通过链接导入配置，也可以通过左上角扫码添加配置
 
