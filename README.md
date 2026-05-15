@@ -27,7 +27,7 @@ https://github.com/SagerNet/sing-box/releases
 使用sudo sing-box run -c "/路径/你的服务端配置"即可以指定配置运行singbox并开启vpn服务器
 
 
-电脑端使用v2rayN即可
+电脑端使用v2rayN即可，在此处下载：https://github.com/2dust/v2rayN/releases
   
 >在v2rayN底部栏打开tun开关和全局路由
 
