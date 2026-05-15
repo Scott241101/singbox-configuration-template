@@ -10,7 +10,7 @@
 
 建议通过获取github student develop pack来通过微软的认证，github student develop pack包含微软azure和digitalocean的福利，两者都可以允许免费开vpn服务器
 
->针对digitalocean，有一年$200的额度,可以开两台基础1核心1G内存的虚拟机
+>针对digitalocean，有一年$200的额度，可以开两台基础1核心1G内存的虚拟机
 
 所有服务器都需要一个公共ip，并放行22端口（ssh，用于配置服务器）和443端口（用于sing-box连接）
 
