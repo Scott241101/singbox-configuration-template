@@ -35,6 +35,8 @@ https://github.com/SagerNet/sing-box/releases
 
 >>建议将MTU设置为小于1420
 
+>点击顶部闪电图标可以测试延时
+
 >（可选）在顶部栏设置里面的core类型设置将vless改为sing-box
 
 >（可选）顶部栏设置里面的tun设置里面开启ipv6
