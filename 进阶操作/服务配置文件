@@ -6,6 +6,7 @@ Wants=network-online.target
 
 [Service]
 Type=simple
+# 请将此处的 /usr/bin/sing-box 替换为你实际的路径
 ExecStart=/usr/bin/sing-box run -c /etc/sing-box/server-conf.json
 Restart=on-failure
 RestartSec=10s
@@ -17,6 +18,15 @@ User=nobody
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 # 3. 限制程序无法再次提升权限
 NoNewPrivileges=true
+# 4. 终极只读沙盒开启
+ProtectSystem=strict
 # --- 新增这一行 ---
 # Systemd 会自动创建 /var/log/sing-box 目录，并把 owner 设为 nobody
 LogsDirectory=sing-box
+# 3. (可选/双保险) 如果你有其他不在 /var/log 下的文件必须要写，显式声明白名单：
+ReadWritePaths=/var/log/sing-box
+# 🚨 终极绝杀：禁止在这个进程的任何挂载点上执行新的二进制文件 (哪怕他下载到了私有 /tmp，也无法运行)
+NoExecPaths=/
+
+[Install]
+WantedBy=multi-user.target
