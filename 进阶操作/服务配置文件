@@ -25,6 +25,8 @@ ProtectSystem=strict
 LogsDirectory=sing-box
 # 3. (可选/双保险) 如果你有其他不在 /var/log 下的文件必须要写，显式声明白名单：
 ReadWritePaths=/var/log/sing-box
+# 🟢 终极豁免：全盘只允许执行 sing-box 这一个本体程序，多一个都不行！
+ExecPaths=/usr/bin/sing-box
 # 🚨 终极绝杀：禁止在这个进程的任何挂载点上执行新的二进制文件 (哪怕他下载到了私有 /tmp，也无法运行)
 NoExecPaths=/
 
