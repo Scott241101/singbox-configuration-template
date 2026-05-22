@@ -6,10 +6,10 @@
 
 保存之后运行以下命令：
 
+运行命令前，需要将sing-box日志记录目录设置为/var/log/sing-box/sing-box.log，否则可能会因为权限问题导致无法启动sing-box程序
+
 sudo systemctl daemon-reload
 
 sudo systemctl enable sing-box
 
 sudo systemctl start sing-box.service
-
-需要将sing-box日志记录目录设置为/var/log/sing-box/sing-box.log，否则可能会因为权限问题导致无法启动sing-box程序
