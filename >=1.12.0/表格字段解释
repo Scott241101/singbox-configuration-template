@@ -5,6 +5,6 @@ SNI:服务器需要伪装的网站或SNI
 short id：服务器short id
 reality pub key：reality公钥
 ipv6：服务器ipv6地址
-mgmt addr:服务器管理地址
+mgmt addr:服务器管理地址，可以和ip以及ipv6重复，也可以是其它ipv4或ipv6地址
 user name:用户名
 uuid：用户uuid
