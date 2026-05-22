@@ -9,7 +9,7 @@ from hashlib import sha256
 
 SERVERS_CSV = "./singbox服务器信息.csv"
 USERS_CSV = "./singbox客户uuid.csv"
-SERVER_TEMPLATE_FILE = "./template/1.12.0模板.txt"
+SERVER_TEMPLATE_FILE = "./template/1.12+模板.txt"
 
 SERVERS_DIR = "./服务器配置/输出文件夹"
 CLIENTS_OUT_DIR = "./客户端链接/输出文件夹"
@@ -62,16 +62,14 @@ class auto_deployer():
     def upload_and_restart(self, local_config_path):
         # 1. SFTP 上传文件
         sftp = self.client.open_sftp()
-        sftp.put(local_config_path, "/路径/服务端配置")
+        sftp.put(local_config_path, "/路径/服务端配置.json") 
         sftp.close()
         print("    [+] 配置文件已成功上传")
         
         # 2. 强制终止现有进程并运行新配置
         # 注意：此处加上 nohup 和 & 让其在后台运行，否则直接 run 会导致 SSH 进程阻塞卡死
-        self.send_command("sudo cp singbox-server-conf.json /etc/sing-box/server-conf.json")
-        sleep(2)
         # 如果sing-box为服务，则将self.send_command里面内容替换为“sudo systemctl restart sing-box.service” （此处假设sing-box服务名称为sing-box.service）
-        self.send_command("sudo pkill -9 sing-box ; nohup sudo sing-box run -c /etc/sing-box/server-conf.json > /dev/null 2>&1 &")
+        self.send_command("sudo pkill -9 sing-box ; nohup sudo sing-box run -c /路径/服务器配置文件.json > /dev/null 2>&1 &")
         print("    [+] 已执行: 终止旧进程并后台启动新配置")
         
     def close_ssh_session(self):
