@@ -1,7 +1,8 @@
 {
   "log": {
     "level": "info",
-    "output": "日志记录路径/文件名,建议使用/var/log/sing-box/sing-box.log",
+    "output": "日志记录路径/文件名",
+	//建议使用/var/log/sing-box/sing-box.log
     "timestamp": true
   },
 
@@ -36,7 +37,8 @@
 		//最好与云平台主域名及其相关域名切合（如：在azure上使用microsoft.com或者www.bing.com），如果主域名不可免翻墙访问，则切换其他通用非厂商关联型域名（如：www.fandom.com，www.speedtest.net）
         "reality": {
           "enabled": true,
-          "private_key": "reality私钥，使用sing-box generate reality-keypair生成密钥对",
+          "private_key": "reality私钥",
+		  //使用sing-box generate reality-keypair生成密钥对
           "short_id": [
             "服务端id，格式为8位16进制数字和字母"
             ],
