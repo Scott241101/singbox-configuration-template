@@ -1,1 +1,1 @@
-vless://<uuid>@<服务器ip>:443?security=reality&encryption=none&pbk=<reality 公钥>&headerType=none&fp=chrome&type=tcp&sni=<服务器名称或SNI，需要与服务端保持一致>&sid=<服务器short id，需要与服务器保持一致>#<配置名称>
+vless://<uuid>@<服务器ip，如果是ipv6就需要带上“[]”>:443?security=reality&encryption=none&pbk=<reality 公钥>&headerType=none&fp=chrome&type=tcp&sni=<服务器名称或SNI，需要与服务端保持一致>&sid=<服务器short id，需要与服务器保持一致>#<配置名称>
