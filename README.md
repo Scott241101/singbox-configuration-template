@@ -69,7 +69,7 @@ https://github.com/2dust/v2rayNG/releases
 
 ios去app store搜索v2box下载
 
->需要海外apple id，建议使用美国区域apple id
+>需要海外apple id，建议使用欧美区域apple id
 
 >去到底部栏第二个选项里面，通过右上角+通过链接导入配置，也可以通过左上角扫码添加配置
 
