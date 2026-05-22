@@ -70,6 +70,7 @@ class auto_deployer():
         # 注意：此处加上 nohup 和 & 让其在后台运行，否则直接 run 会导致 SSH 进程阻塞卡死
         self.send_command("sudo cp singbox-server-conf.json /etc/sing-box/server-conf.json")
         sleep(2)
+        # 如果sing-box为服务，则将self.send_command里面内容替换为“sudo systemctl restart sing-box.service” （此处假设sing-box服务名称为sing-box.service）
         self.send_command("sudo pkill -9 sing-box ; nohup sudo sing-box run -c /etc/sing-box/server-conf.json > /dev/null 2>&1 &")
         print("    [+] 已执行: 终止旧进程并后台启动新配置")
         
@@ -129,7 +130,7 @@ def process_server_configs(servers, users, template_path):
 
         # 遍历 inbound 节点进行同步
         for inbound in config.get('inbounds', []):
-            if inbound.get('type') == 'vless' and inbound.get('tag') == 'reality-in':
+            if inbound.get('type') == 'vless':
                 
                 # 1. 检测 UUID 列表
                 current_uuids = set(u.get('uuid') for u in inbound.get('users', []))
