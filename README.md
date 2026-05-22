@@ -27,13 +27,14 @@
 具体创建方法见此链接：
 https://drive.google.com/drive/folders/1R1ADiUCHaPJfhDfSqWEZEO7Rib2vKKfZ?usp=drive_link
 
-在这个链接里面寻找对应版本，然后复制下载链接并使用wget命令下载：
+在这个链接里面寻找对应sing-box版本，然后复制下载链接并使用wget命令下载：
 https://github.com/SagerNet/sing-box/releases
 
 之后按照模板创建服务端配置和客户端链接
 
 使用sudo sing-box run -c "/路径/你的服务端配置"即可以指定配置运行singbox并开启vpn服务器
 
+---------------------------------------------------------------------------------------------
 
 电脑端使用v2rayN即可，在此处下载：https://github.com/2dust/v2rayN/releases
   
