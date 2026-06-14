@@ -64,6 +64,19 @@
        "action": "sniff"
       },
       {
+        // 1. 白名单：放行已知正规邮箱服务商的发信域名
+        "domain_suffix": [
+          "smtp.gmail.com",
+          "smtp.mail.yahoo.com",
+          "smtp.office365.com",
+          "smtp-mail.outlook.com",
+          "smtp.mail.me.com"
+        ],
+        "port": [465, 587],
+        "action":"route",
+        "outbound": "direct"
+      },
+      {
        "protocol": "bittorrent",
        "action": "reject"
       },
