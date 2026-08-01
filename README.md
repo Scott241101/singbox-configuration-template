@@ -8,9 +8,7 @@
 
 也可以通过搜索google ai pro student来获取谷歌ai pro会员，该会员可以允许免费无限制使用gemini pro，并且每个月有US$10的谷歌云（gcp）额度，可以用来搭建免费VPN服务器，并且任何帐号每月有一个免费e2-micro虚拟机（仅限在us-central1, us-west1, us-east1其中任意一个区域）额度（附带30G标准磁盘）
 
-建议通过获取github student develop pack来通过微软的认证，github student develop pack包含微软azure和digitalocean的福利，两者都可以允许免费开vpn服务器
-
->针对digitalocean，有一年$200的额度，可以开两台基础1核心1G内存的虚拟机
+建议通过获取github student develop pack来通过微软的认证，github student develop pack包含微软azure的福利，可以允许免费开vpn服务器
 
 -----------------------------------------------------------------------------------------------------
 
